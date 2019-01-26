@@ -1,10 +1,9 @@
 import java.util.Date;
 import java.text.SimpleDateFormat;
 class Example{
-   public static void main(String args[]){
+   public static float count_date (String dateBeforeString, String dateAfterString){
+
 	 SimpleDateFormat myFormat = new SimpleDateFormat("dd MM yyyy");
-	 String dateBeforeString = "31 01 2014";
-	 String dateAfterString = "02 02 2014";
 
 	 try {
 	       Date dateBefore = myFormat.parse(dateBeforeString);
@@ -15,7 +14,7 @@ class Example{
                 * float daysBetween =
                 *         TimeUnit.DAYS.convert(difference, TimeUnit.MILLISECONDS)
                 */
-	       System.out.println("Number of Days between dates: "+daysBetween);
+	       return daysBetween;
 	 } catch (Exception e) {
 	       e.printStackTrace();
 	 }
